@@ -1,21 +1,21 @@
-# gulp-packer
+# gulp-js-minify
 
 Gulp plugin to use [packer](http://dean.edwards.name/packer)
 
 ## Install
 
 ```
-npm install --save-dev gulp-packer
+npm install --save-dev gulp-js-minify
 ```
 
 ## Usage
 
 ```
-var packer = require('gulp-packer');
+var minifyjs = require('gulp-js-minify');
 
-gulp.task('packer-js', function(){
+gulp.task('minfiy-js', function(){
   gulp.src('./dist/a.js')
-    .pipe(packer.packScript())
+    .pipe(minifyjs.minifyScript())
     .pipe(gulp.dest('./dist/'));
 });
 ```

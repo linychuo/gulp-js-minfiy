@@ -11,11 +11,11 @@ module.exports = function(options) {
     }
 
     if (file.isStream()) {
-      return cb(new PluginError('gulp-packer', 'Stream is not supported'));
+      return cb(new PluginError('gulp-js-minify', 'Stream is not supported'));
     }
 
     var str = file.contents.toString('utf8');
-    file.contents = packer.packScript(src);
+    file.contents = packer.minifyScript(src);
 
     return cb(null, file);
   });

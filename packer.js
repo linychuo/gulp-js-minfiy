@@ -377,7 +377,7 @@ function pack(_7, _0, _2, _8) {
 };
 
 
-module.exports.packScript = function(script) {
+module.exports.minifyScript = function(script) {
   return pack(script, 62, 1, 0);
 };
 
