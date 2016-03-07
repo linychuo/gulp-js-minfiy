@@ -376,11 +376,14 @@ function pack(_7, _0, _2, _8) {
   return _15(_7)
 };
 
+var encoding = 62;
+var fastDecode = true;
+var specialChars = false;
 
 module.exports.minifyScript = function(script) {
-  return pack(script, 62, 1, 0);
+  return pack(script, encoding, fastDecode, specialChars);
 };
 
 module.exports.decodeScript = function(decodedScript) {
-  return eval("String=" + decodedScript.slice(4));
+  return eval("String" + decodedScript.slice(4));
 }
