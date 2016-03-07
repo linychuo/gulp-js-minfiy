@@ -1,3 +1,4 @@
+'use strict';
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
 var through2 = require('through2');
@@ -15,9 +16,8 @@ module.exports = function(options) {
     }
 
     var str = file.contents.toString('utf8');
-    file.contents = packer.minifyScript(src);
+    file.contents = new Buffer(packer.minifyScript(src));
 
     return cb(null, file);
   });
-
 }
