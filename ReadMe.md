@@ -13,9 +13,9 @@ npm install --save-dev gulp-js-minify
 ```
 var minifyjs = require('gulp-js-minify');
 
-gulp.task('minfiy-js', function(){
+gulp.task('minify-js', function(){
   gulp.src('./dist/a.js')
-    .pipe(minifyjs.minifyScript())
+    .pipe(minifyjs())
     .pipe(gulp.dest('./dist/'));
 });
 ```
