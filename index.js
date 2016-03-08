@@ -16,7 +16,7 @@ module.exports = function(options) {
     }
 
     var str = file.contents.toString('utf8');
-    file.contents = new Buffer(packer.minifyScript(src));
+    file.contents = new Buffer(packer.minifyScript(str));
 
     return cb(null, file);
   });
